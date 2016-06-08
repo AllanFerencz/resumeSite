@@ -17,6 +17,15 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:700italic,700);
 
 
+@fa_path: "../node_modules/font-awesome/less";
+@import "@{fa_path}/variables.less";
+@import "@{fa_path}/mixins.less";
+@import "@{fa_path}/path.less";
+@import "@{fa_path}/core.less";
+@import "@{fa_path}/icons.less";
+@import "@{fa_path}/larger.less";
+
+
 @web-colour: #3A3A3A;
 @web-colour2: #eae7b4;
 @web-colour3: #35435b;
@@ -52,11 +61,13 @@ h3{
 	background: @web-colour;
 	color:@web-colour2;
 	border-color:@web-colour2; 
-	padding: 10px 30px 10px 30px;
-	margin: 10px 0px 35px 0px;
+	padding: 5px 30px 10px 15px;
 	position: relative;
 	display: inline-block;
-	border: 1px @web-colour2;
+	line-height: 40px;
+	border: @web-colour2;
+	border-style: solid;
+    border-width: 1px;	
 }
 	.btn-link:hover{
 		text-decoration:none;
@@ -69,6 +80,11 @@ h3{
 	.btn-link>h6{
 		text-align: center;
 		vertical-align: middle;
+		float: right;
+	}
+
+	.btn-link>i{
+
 	}
 
 #backOfMe{
@@ -232,6 +248,12 @@ h3{
 .float-off{
 	float:none;
 }
+.float-right{
+	float:right;
+}
+.float-left{
+	float:left;
+}
 .titles{
 	font-family: 'Erica One', cursive;
 }
@@ -265,7 +287,7 @@ h3{
 	border-radius: .25em;
 	color: @web-colour3;
 	font-family: 'Press Start 2P', cursive;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	}
 
 
@@ -294,6 +316,7 @@ h3{
 	background:@web-colour; 
 	border-radius: .25em;
 	padding: 15px;
+	overflow: hidden;
 }
 	.content-paragraph>h2{
 		line-height: 150%;
@@ -780,7 +803,9 @@ h3{
 		.content-graph-bars;
 		width:100%;
 	}
-
+	.about-box{
+		min-height: 468px;
+	}
 
 }
 
@@ -941,7 +966,7 @@ h3{
 
 }
 
-@media only screen and (max-width: 350px)  {
+@media only screen and (max-width: 319px)  {
 .content-graph-column-bar {
     height: 1006%;
 }
